@@ -1,5 +1,7 @@
 /.idea/
 /log/
 /notebooks/
+
 /test_spark.zip
 /environment.tar.gz
+/todo.txt
