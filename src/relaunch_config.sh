@@ -12,8 +12,8 @@ jps
 
 echo "\nSubmitting file using configuration file"
 /usr/local/bin/spark-submit \
---deploy-mode client \
 --driver-java-options "-Dlog4j.configuration=file:../conf/driver_log4j.properties" \
 --properties-file ../conf/spark-defaults.conf \
 --py-files ./main_utils.py \
-./main.py > ../log/driver_console.txt
+--deploy-mode client \
+./main.py > ../log/events/app_response.txt
