@@ -2,7 +2,7 @@ import os
 import logging
 from pyspark.sql import SparkSession
 
-from src.main_utils import test_fun
+from test_spark.main_utils import test_fun
 
 spark = SparkSession.builder.appName("hello").getOrCreate()
 log4jLogger = spark.sparkContext._jvm.org.apache.log4j
