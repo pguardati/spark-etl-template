@@ -1,8 +1,6 @@
-import os
-import logging
 from pyspark.sql import SparkSession
 
-from test_spark.main_utils import test_fun
+from test_spark.src.main_utils import test_fun
 
 spark = SparkSession.builder.appName("hello").getOrCreate()
 log4jLogger = spark.sparkContext._jvm.org.apache.log4j

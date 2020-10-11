@@ -1,6 +1,13 @@
+# ---  inside the cluster
+zip -r test_spark.zip test_spark
+
+echo "\nImport spark environment configuration"
+export SPARK_HOME=/usr/local/Cellar/apache-spark/3.0.1/libexec/
+cp conf/spark-env.sh $SPARK_HOME/conf/spark-env.sh
+
 echo "\nKilling master and slave.."
-/usr/local/Cellar/apache-spark/3.0.1/libexec/sbin/stop-master.sh
-/usr/local/Cellar/apache-spark/3.0.1/libexec/sbin/stop-slave.sh
+$SPARK_HOME/sbin/stop-master.sh
+$SPARK_HOME/sbin/stop-slave.sh
 jps
 
 echo "Reset logs folder"
@@ -8,18 +15,17 @@ mkdir log/events
 mkdir log/nodes
 
 echo "\nCopying env. variables and spinning master and slaves:"
-cp conf/spark-env.sh /usr/local/Cellar/apache-spark/3.0.1/libexec/conf/spark-env.sh
-/usr/local/Cellar/apache-spark/3.0.1/libexec/sbin/start-master.sh
-/usr/local/Cellar/apache-spark/3.0.1/libexec/sbin/start-slave.sh spark://localhost:7077
+$SPARK_HOME/sbin/start-master.sh
+$SPARK_HOME/sbin/start-slave.sh spark://localhost:7077
 jps
 
-echo "\nCreating zip archive.."
-zip -r test_spark.zip test_spark
 
 echo "\nSubmitting file using configuration file"
-/usr/local/bin/spark-submit \
+$SPARK_HOME/bin/spark-submit \
 --driver-java-options "-Dlog4j.configuration=file:conf/driver_log4j.properties" \
 --properties-file conf/spark-defaults.conf \
 --deploy-mode client \
 --py-files test_spark.zip \
-test_spark/main.py > log/events/app_response.txt
+--archives environment.tar.gz#environment \
+test_spark/script/main.py > log/events/app_response.txt
+
