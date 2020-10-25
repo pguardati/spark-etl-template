@@ -1,6 +1,6 @@
 # Configuration file templates
 This is a description of the configuration files that
-should be put in test_spark/config to run the scripts
+should be put in `spark_etl_template/config` to run the scripts
 
 ##dl.cfg
 configuration to setup emr cluster and a s3 bucket to store the results

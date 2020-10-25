@@ -27,10 +27,7 @@ export PYTHONPATH
 ```
 conda env create -f spark_etl_template/environment.yml
 ```
-3 - Create the configuration files: follow 
-```
-docs/setup_config_files.md
-```
+3 - Create the configuration files described in `docs/setup_config_files.md`
 
 # Usage
 ## To deploy the application locally
