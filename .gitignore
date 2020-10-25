@@ -2,6 +2,6 @@
 /log/
 /notebooks/
 
-/test_spark.zip
-/environment.tar.gz
+/test_spark/config/
 /todo.txt
+/archive/
