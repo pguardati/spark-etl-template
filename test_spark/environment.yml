@@ -1,0 +1,10 @@
+name: test_spark
+channels:
+  - defaults
+dependencies:
+  - pyspark
+  - python==3.7.5
+  - pandas
+  - conda-pack
+  - boto3
+
