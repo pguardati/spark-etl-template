@@ -67,7 +67,7 @@ sh spark_etl_template/cicd/cluster_kill_apps.sh
 
 # Important:
 When the application is completed,  
-closet the ssh connection with the cluster  
+close the ssh connection with the cluster  
 and destroy the infrastructure, running:
 ```
 python spark_etl_template/script/delete_infrastructure.py spark_etl_template/config/
