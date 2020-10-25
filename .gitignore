@@ -2,6 +2,6 @@
 /log/
 /notebooks/
 
-/test_spark/config/
+/spark_etl_template/config/
 /todo.txt
 /archive/

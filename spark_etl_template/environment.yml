@@ -1,4 +1,4 @@
-name: test_spark
+name: spark_etl_template
 channels:
   - defaults
 dependencies:

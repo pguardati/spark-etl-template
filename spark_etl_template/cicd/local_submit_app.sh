@@ -1,4 +1,4 @@
-MODULE_NAME="test_spark"
+MODULE_NAME="spark_etl_template"
 
 echo "\nImporting spark environment configuration.."
 echo "Spark home: $SPARK_HOME"

@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 
-from test_spark.src.library import test_fun
+from spark_etl_template.src.library import test_fun
 
 spark = SparkSession.builder.appName("spark_application_template").getOrCreate()
 log4jLogger = spark.sparkContext._jvm.org.apache.log4j
