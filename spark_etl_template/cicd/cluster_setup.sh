@@ -1,4 +1,4 @@
-MODULE_NAME="test_spark"
+MODULE_NAME="spark_etl_template"
 
 # download and install conda
 wget https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh

@@ -1,4 +1,4 @@
-MODULE_NAME="test_spark"
+MODULE_NAME="spark_etl_template"
 DIR_PACKAGING="archive"
 
 # --- outside the cluster

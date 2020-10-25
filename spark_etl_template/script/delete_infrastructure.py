@@ -3,7 +3,7 @@ import sys
 import configparser
 import argparse
 
-from test_spark.src.infrastructure import logger, delete_bucket, terminate_emr
+from spark_etl_template.src.infrastructure import logger, delete_bucket, terminate_emr
 
 
 def parse_args(args):

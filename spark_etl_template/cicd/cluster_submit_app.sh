@@ -1,4 +1,4 @@
-MODULE_NAME="test_spark"
+MODULE_NAME="spark_etl_template"
 
 echo "\nImporting spark environment configuration.."
 source /usr/lib/spark/conf/spark-env.sh

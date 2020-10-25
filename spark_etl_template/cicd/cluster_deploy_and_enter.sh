@@ -1,4 +1,4 @@
-MODULE_NAME="test_spark"
+MODULE_NAME="spark_etl_template"
 
 # get host from config file
 host=$(grep -i 'host' $MODULE_NAME/config/dl.cfg | sed -E 's/host = (.*)/\1/')
