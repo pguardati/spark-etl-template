@@ -27,7 +27,10 @@ export PYTHONPATH
 ```
 conda env create -f test_spark/environment.yml
 ```
-3 - Create the configuration files: follow CONFIG_SETUP.md
+3 - Create the configuration files: follow 
+```
+docs/setup_config_files.md
+```
 
 # Usage
 ##To deploy the application locally
@@ -58,7 +61,7 @@ localhost:8157
 ```
 in case of problems, read these instructions: 
 ```
-docs/CONFIG_UI.md
+docs/setup_spark_ui.md
 ```
 
 4 - to kill all running applications
